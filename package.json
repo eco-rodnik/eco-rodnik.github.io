@@ -1,0 +1,29 @@
+{
+  "name": "eco-rodnik.github.io",
+  "version": "1.0.0",
+  "description": "Ecologic organization \"Rodnik\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "watch": "rollup -wc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eco-rodnik/eco-rodnik.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eco-rodnik/eco-rodnik.github.io/issues"
+  },
+  "homepage": "https://github.com/eco-rodnik/eco-rodnik.github.io#readme",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^4.1.2",
+    "rollup": "^2.12.0",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
