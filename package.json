@@ -6,13 +6,13 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -wc",
-    "deploy": "gh-pages -b master -d dist"
+    "deploy": "gh-pages -b master -d dist -u \"Andrew Ryazantsev <andrew.ryazantsev@gmail.com>\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eco-rodnik/eco-rodnik.github.io.git"
   },
-  "author": "",
+  "author": "Andrew Ryazantsev <andrew.ryazantsev@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eco-rodnik/eco-rodnik.github.io/issues"
