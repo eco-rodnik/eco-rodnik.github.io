@@ -9,7 +9,7 @@
         "alwaysStrict": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "sourceMap": false,
+        "sourceMap": true,
         "allowSyntheticDefaultImports": true,
     },
     "include": [
