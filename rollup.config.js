@@ -1,12 +1,13 @@
 import fs from 'fs';
 import path from 'path';
+import { sync as mkdirp } from 'mkdirp';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import endorphin from '@endorphinjs/rollup-plugin-endorphin';
+import { terser } from 'rollup-plugin-terser';
 import sass from 'sass';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
-import { sync as mkdirp } from 'mkdirp';
 
 export default {
     input: 'src/index.ts',
@@ -52,5 +53,6 @@ export default {
             }
         }),
         typescript({ module: 'esnext' }),
+        terser(),
     ]
 };

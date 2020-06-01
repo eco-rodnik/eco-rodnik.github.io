@@ -4,7 +4,6 @@
   "description": "Ecologic organization \"Rodnik\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "watch": "rollup -wc"
   },
@@ -28,6 +27,7 @@
     "express": "^4.17.1",
     "mkdirp": "^1.0.4",
     "rollup": "^2.12.0",
+    "rollup-plugin-terser": "^6.1.0",
     "sass": "^1.26.7",
     "typescript": "^3.9.3"
   },
