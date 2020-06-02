@@ -34,6 +34,7 @@ jobs:
         push-branch: 'master'
         commit-message: 'publish'
         force-add: 'true'
+        rebase: 'true'
         files: dist/
         name: Andrew Ryazantsev
         email: andrew.ryazantsev@gmail.com
