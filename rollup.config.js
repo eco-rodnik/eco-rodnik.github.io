@@ -12,7 +12,7 @@ import autoprefixer from 'autoprefixer';
 export default {
     input: 'src/index.ts',
     output: {
-        file: 'docs/index.js',
+        file: 'dist/index.js',
         format: 'iife',
         sourcemap: true
     },
@@ -33,7 +33,7 @@ export default {
                     }
                 },
                 async name(code, map) {
-                    const destFile = './docs/index.css';
+                    const destFile = './dist/index.css';
                     const absPath = path.resolve(__dirname, destFile);
                     const processed = await postcss([autoprefixer]).process(code, {
                         from: void 0,
