@@ -27,7 +27,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test --if-present
-    - run: git checkout master
+    - run: git checkout origin/master
     - run: git add dist -f
     - run: git commit -m 'publish'
     - run: git push
