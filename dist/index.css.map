@@ -1,1 +1,0 @@
-{"version":3,"sources":["../rod-app.scss"],"names":[],"mappings":"AAAA,iBACI,uBAAA,CAAA,oBAAA,CAAA,eAAA,CACA,oBAAA,CACA,eAAA,CACA,qBAAA,CACA,WAAA","file":"index.css","sourcesContent":["button {\n    appearance: none;\n    display: inline-block;\n    background: none;\n    border: 3px solid blue;\n    padding: 5px;\n}"]}
