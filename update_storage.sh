@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-echo "{}" | cat > ./resources/storage.json
-git config user.email "andrew.ryazantsev@gmail.com"
-git config user.name "Andrew Ryazantsev"
+echo "{\"test\":[[]]}" | cat > ./resources/storage.json
+git config user.email "noreply@github.com"
+git config user.name "GitHub"
 git add ./resources/storage.json
 git commit -m 'update storage'
 git push
