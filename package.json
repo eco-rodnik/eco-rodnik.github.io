@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -wc"
+    "watch": "rollup -wc",
+    "server": "(cd ./tools && node ./server.js)"
   },
   "repository": {
     "type": "git",

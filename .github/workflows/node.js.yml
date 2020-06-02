@@ -25,9 +25,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+    - run: (cd ./tools && ./update_storage.sh)
     - run: npm run build --if-present
     - run: npm test --if-present
-    - run: ./update_storage.sh
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v2
