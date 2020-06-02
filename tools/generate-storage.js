@@ -28,7 +28,10 @@ console.log('Storage generation done');
 
 function collectInfo(basePath) {
     return fs.readdirSync(basePath)
-    .filter(d => !d.startsWith('.'))
+    .filter(d =>
+        fs.statSync(path.join(basePath, d)).isDirectory() &&
+        !d.startsWith('.')
+    )
     .sort((a, b) => 
         fs.statSync(path.join(basePath, b)).mtime.getTime() -
         fs.statSync(path.join(basePath, a)).mtime.getTime()
