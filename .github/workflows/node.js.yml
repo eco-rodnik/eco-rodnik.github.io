@@ -27,7 +27,11 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test --if-present
-    - run: git checkout origin/master
-    - run: git add dist -f
-    - run: git commit -m 'publish'
-    - run: git push
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: master
+        build_dir: dist
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
