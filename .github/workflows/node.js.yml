@@ -27,14 +27,12 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test --if-present
-    - name: push
-      uses: github-actions-x/commit@v2.6
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        push-branch: 'master'
-        commit-message: 'publish'
-        force-add: 'true'
-        rebase: 'true'
-        files: dist/
-        name: Andrew Ryazantsev
-        email: andrew.ryazantsev@gmail.com
+
+    - name: Release Github Pages
+      uses: igolopolosov/github-action-release-github-pages@master
+      env:
+        GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_PAGES_REPO_AUTHOR: Roohoo
+        GITHUB_PAGES_REPO_NAME: eco-rodnik.github.io
+        GITHUB_PAGES_RELEASE_BRANCH: master
+        PROJECT_BUILD_FOLDER: dist
