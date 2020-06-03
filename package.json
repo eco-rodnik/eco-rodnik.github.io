@@ -6,7 +6,9 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -wc",
-    "server": "(cd ./tools && node ./server.js)"
+    "server": "(cd ./tools && node ./server.js)",
+    "generate-storage": "(cd ./tools && node ./generate-storage)",
+    "commit-storage": "(cd ./tools && ./commit-storage.sh)"
   },
   "repository": {
     "type": "git",

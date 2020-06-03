@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const resources = process.env.RESOURCES;
-const storagePath = process.env.STORAGE;
+const resources = '../resources';
+const storagePath = '../resources/storage.json';
 
 const PARTS = {
     NEWS: 'news',
