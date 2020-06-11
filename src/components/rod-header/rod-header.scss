@@ -1,6 +1,6 @@
 :host {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     height: 178px;
     margin-top: 52px;
     border-bottom: 1px solid #E0E0E0;
@@ -8,10 +8,28 @@
     @media (max-width: 1024px) {
         margin: 0 21px;
     }
+
+    h1, h2 {
+        margin-top: 0;
+    }
+}
+
+rod-logo, rod-menu {
+    margin-bottom: 21px;
 }
 
 .header-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin-left: 48px;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 h1 {
