@@ -1,8 +1,24 @@
+<link rel="import" href="../rod-page/rod-page.html" />
+<link rel="import" href="../rod-header/rod-header.html" />
+<link rel="import" href="../rod-content/rod-content.html" />
+<link rel="import" href="../rod-disclaimer/rod-disclaimer.html" />
+<link rel="import" href="../rod-contacts/rod-contacts.html" />
+<link rel="import" href="../rod-documents/rod-documents.html" />
+
 <link rel="stylesheet" href="./rod-app.scss" />
 <script src="./rod-app.ts"></script>
 
 <template>
-    Hello world!<br/>
-    <button on:click={onClick}>Click me</button>
-	<p>Clicked { #count } { #count !== 1 ? 'times' : 'time' }</p>
+    <rod-page>
+        <rod-header/>
+        <rod-content>
+            <rod-disclaimer/>
+        </rod-content>
+        <rod-content>
+            <rod-contacts/>
+        </rod-content>
+        <rod-content>
+            <rod-documents/>
+        </rod-content>
+    </rod-page>
 </template>

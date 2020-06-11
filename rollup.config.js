@@ -18,6 +18,7 @@ export default {
     },
     plugins: [
         nodeResolve(),
+        typescript(),
         endorphin({
             css: {
                 preprocess(type, data, file) {
@@ -52,7 +53,6 @@ export default {
                 }
             }
         }),
-        typescript({ module: 'esnext' }),
         terser(),
     ]
 };

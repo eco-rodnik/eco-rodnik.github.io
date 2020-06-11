@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    align-items: center;
+    height: 178px;
+    margin-top: 52px;
+    border-bottom: 1px solid #E0E0E0;
+
+    @media (max-width: 1024px) {
+        margin-top: 0;
+    }
+}
+
+.header-content {
+    margin-left: 48px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.2;
+}
