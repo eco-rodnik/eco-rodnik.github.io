@@ -2,10 +2,6 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 1024px) {
-        display: none;
-    }
-
     a, a:visited {
         color: #424242;
         text-decoration: none;

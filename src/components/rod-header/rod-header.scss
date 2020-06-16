@@ -9,6 +9,13 @@
         margin: 0 21px;
     }
 
+    @media (max-width: 732px) {
+
+        rod-menu {
+            display: none;
+        }
+    }
+
     h1, h2 {
         margin-top: 0;
     }
