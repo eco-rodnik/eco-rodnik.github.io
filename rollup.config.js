@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { sync as mkdirp } from 'mkdirp';
 import nodeResolve from '@rollup/plugin-node-resolve';
+import json from '@rollup/plugin-json';
 import typescript from '@rollup/plugin-typescript';
 import endorphin from '@endorphinjs/rollup-plugin-endorphin';
 import { terser } from 'rollup-plugin-terser';
@@ -18,6 +19,7 @@ export default {
     },
     plugins: [
         nodeResolve(),
+        json(),
         typescript(),
         endorphin({
             css: {

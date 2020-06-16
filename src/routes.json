@@ -1,0 +1,27 @@
+[
+    {
+        "path": "/",
+        "title": "ОЭО Родник",
+        "base": true
+    },
+    {
+        "path": "/about",
+        "title": "Кто мы"
+    },
+    {
+        "path": "/events",
+        "title": "Что мы делаем"
+    },
+    {
+        "path": "/news",
+        "title": "Новости"
+    },
+    {
+        "path": "/support",
+        "title": "Поддержать"
+    },
+    {
+        "path": "/contacts",
+        "title": "Контакты"
+    }
+]

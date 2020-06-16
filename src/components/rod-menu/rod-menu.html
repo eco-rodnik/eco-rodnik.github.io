@@ -1,9 +1,16 @@
 <link rel="stylesheet" href="./rod-menu.scss" />
 
 <template>
-    <a href="#">Кто мы</a>
-    <a href="#">Что мы делаем</a>
-    <a href="#">Новости</a>
-    <a href="#">Поддержать</a>
-    <a href="#">Контакты</a>
+    <nav class="menu">
+        <ul>
+            <e:for-each select={ $routes[[item => !item.base]] } key={ @value.path }>
+                <li>
+                    <a href={ @value.path }
+                       on:click:prevent={ $.router.navigateTo(@value) }>
+                       { @value.title }
+                    </a>
+                </li>
+            </e:for-each>
+        </ul>
+    </nav>
 </template>

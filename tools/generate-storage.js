@@ -40,6 +40,8 @@ function collectInfo(basePath) {
         const dirPath = path.join(basePath, dirName);
         const fileList = fs.readdirSync(dirPath);
 
+        // TODO: read and parse contents OR load and parse in runtime
+
         return {
             dirName,
             dirPath,
