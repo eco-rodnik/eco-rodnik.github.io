@@ -2,7 +2,8 @@
     {
         "path": "/",
         "title": "ОЭО Родник",
-        "base": true
+        "base": true,
+        "selected": true
     },
     {
         "path": "/about",

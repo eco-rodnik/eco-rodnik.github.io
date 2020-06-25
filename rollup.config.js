@@ -2,9 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import { sync as mkdirp } from 'mkdirp';
 import nodeResolve from '@rollup/plugin-node-resolve';
+import tslint from 'rollup-plugin-tslint';
 import json from '@rollup/plugin-json';
 import typescript from '@rollup/plugin-typescript';
 import endorphin from '@endorphinjs/rollup-plugin-endorphin';
+import buble from '@rollup/plugin-buble';
 import { terser } from 'rollup-plugin-terser';
 import sass from 'sass';
 import postcss from 'postcss';
@@ -18,6 +20,7 @@ export default {
         sourcemap: true
     },
     plugins: [
+        tslint(),
         nodeResolve(),
         json(),
         typescript(),
@@ -54,6 +57,10 @@ export default {
                     }
                 }
             }
+        }),
+        buble({
+            transforms: { forOf: false },
+            objectAssign: 'Object.assign',
         }),
         terser(),
     ]

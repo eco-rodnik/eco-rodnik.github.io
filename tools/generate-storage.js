@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const resources = '../resources';
-const storagePath = '../resources/storage.json';
+const resources = '../dist/resources';
+const storagePath = '../src/storage.json';
 
 const PARTS = {
     NEWS: 'news',
@@ -44,7 +44,6 @@ function collectInfo(basePath) {
 
         return {
             dirName,
-            dirPath,
             fileList,
         }
     });

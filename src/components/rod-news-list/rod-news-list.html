@@ -1,0 +1,12 @@
+<link rel="import" href="../rod-news-item/rod-news-item.html" />
+
+<link rel="stylesheet" href="./rod-news-list.scss" />
+
+<template>
+    <h1>Новости</h1>
+    <div>
+        <e:for-each select={ $news } key={ @value.dirName }>
+            <rod-news-item data={ @value } />
+        </e:for-each>
+    </div>
+</template>
