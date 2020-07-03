@@ -1,3 +1,15 @@
+@import "../../styles/common.scss";
+
 :host {
     display: block;
+}
+
+.news-list {
+    padding-top: $gap-2;
+    display: flex;
+
+}
+
+rod-news-item + rod-news-item {
+    padding-left: $gap-4;
 }

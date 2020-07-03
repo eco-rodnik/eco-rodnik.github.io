@@ -1,21 +1,25 @@
 export type RodStorage = {
-    news: RodNews[],
-    events: RodEvent[],
+    news: RodTopic[],
+    events: RodTopic[],
     routes: RodRoute[],
-    initPath: string|null,
+    currentRoute?: RodRoute,
+    initPath?: string,
 };
 
-export type RodNews = {
-    //
-};
-
-export type RodEvent = {
-    //
+export type RodTopic = {
+    name: string,
+    date: string,
+    image: string,
+    title: string,
+    text: string,
 };
 
 export type RodRoute = {
     path: string,
     title: string,
-    base?: boolean,
-    selected?: boolean
+    home?: boolean,
+    selected?: boolean,
+    dynamic?: boolean,
+    dynamicPath?: string,
+    topic?: RodTopic,
 };

@@ -1,0 +1,20 @@
+@import "../../styles/common.scss";
+
+:host {
+    display: block;
+}
+
+.illustration {
+    width: $content-width;
+    height: 380px;
+    background: no-repeat center;
+    background-size: cover;
+
+    @media (max-width: $content-width + 2 * $gap-5) {
+        width: auto;
+    }
+}
+
+.date {
+    color: $text-color-2;
+}

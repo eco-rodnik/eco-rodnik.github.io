@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="./rod-logo.scss" />
 
 <template>
-    <e:var route={ $routes[item => item.base] }/>
+    <e:var route={ $routes[item => item.home] }/>
 
     <a title={ @route.title } href={ @route.path } on:click:prevent={ $.router.navigateTo(@route) }>
         <svg xmlns="http://www.w3.org/2000/svg" width="126" height="144" viewBox="0 0 126 144" fill="none">

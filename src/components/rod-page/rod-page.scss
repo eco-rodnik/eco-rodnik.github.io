@@ -1,10 +1,46 @@
+@import "../../styles/common.scss";
+
 :host {
-    display: block;
-    width: 1024px;
-    height: 100vh;
+    display: grid;
+    gap: $gap-5;
+    grid-template-rows: minmax(152px, auto) 1px 1fr 50px;
+
+    min-height: 100vh;
+    width: $content-width;
     margin: 0 auto;
 
-    @media (max-width: 1024px) {
-        width: 100vw;
+    @media (max-width: $content-width + 2 * $gap-5) {
+        padding: 0 $gap-5;
+        width: auto;
     }
+}
+
+header {
+    display: grid;
+    gap: $gap-6;
+    grid-template:  "logo  title   social" 1fr
+                    "logo  menu    social" auto
+                    / 126px fit-content($content-width) auto;
+}
+
+.divider {
+    background-color: $border-color-1;
+}
+
+rod-logo {
+    grid-area: logo;
+    align-self: center;
+}
+
+rod-title {
+    grid-area: title;
+    align-self: center;
+}
+
+rod-menu {
+    grid-area: menu;
+}
+
+rod-social-links {
+    grid-area: social;
 }

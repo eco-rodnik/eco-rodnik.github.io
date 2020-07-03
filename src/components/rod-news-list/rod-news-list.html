@@ -4,9 +4,9 @@
 
 <template>
     <h1>Новости</h1>
-    <div>
-        <e:for-each select={ $news } key={ @value.dirName }>
-            <rod-news-item data={ @value } />
+    <div class="news-list">
+        <e:for-each select={ $news } key={ @value.name }>
+            <rod-news-item topic={ @value } />
         </e:for-each>
     </div>
 </template>

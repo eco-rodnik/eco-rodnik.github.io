@@ -19,7 +19,7 @@ endorphin('rod-app', RodApp, { target, store });
  * Обработка редиректа от захода на вложенную страницу
  * по прямому урлу (404-hack)
  */
-function getInitPath(): string | null {
+function getInitPath(): string {
     const path = sessionStorage.getItem('redirect');
 
     sessionStorage.removeItem('redirect');

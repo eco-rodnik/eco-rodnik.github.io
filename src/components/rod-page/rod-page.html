@@ -1,5 +1,20 @@
+<link rel="import" href="../rod-logo/rod-logo.html" />
+<link rel="import" href="../rod-title/rod-title.html" />
+<link rel="import" href="../rod-menu/rod-menu.html" />
+<link rel="import" href="../rod-social-links/rod-social-links.html" />
+
 <link rel="stylesheet" href="./rod-page.scss" />
 
 <template>
-    <slot/>
+    <header>
+        <rod-logo />
+        <rod-title />
+        <rod-menu />
+        <rod-social-links />
+    </header>
+    <div class="divider"></div>
+    <main>
+        <slot />
+    </main>
+    <footer />
 </template>

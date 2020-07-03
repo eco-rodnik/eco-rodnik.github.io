@@ -1,5 +1,24 @@
 <link rel="stylesheet" href="./rod-news-item.scss" />
+<script src="./rod-news-item.ts"></script>
 
 <template>
-    <slot/>
+    <div class="topic" on:click={ $.router.navigateTo(#route) }>
+
+        <div class="preview" style="background-image:url({ topic.image })" />
+
+        <div class="content">
+
+            <p class="date">{{ #formattedDate }}</p>
+            
+            <p class="text">{{ topic.title }}</p>
+
+            <p class="direct-link">
+                <a href={ #route } on:click:prevent:stop={ $.router.navigateTo(#route) }>
+                    Подробнее
+                </a>
+            </p>
+
+        </div>
+
+    </div>
 </template>

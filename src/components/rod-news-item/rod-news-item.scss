@@ -1,3 +1,33 @@
+@import "../../styles/common.scss";
+
 :host {
     display: block;
+    width: 240px;
+}
+
+.topic {
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover-background-color;
+    }
+}
+
+.preview {
+    width: 240px;
+    height: 188px;
+    background: no-repeat center;
+    background-size: cover;
+}
+
+.content {
+    padding: $gap-1;
+}
+
+.text {
+    color: $text-color-1;
+}
+
+.date {
+    color: $text-color-2;
 }

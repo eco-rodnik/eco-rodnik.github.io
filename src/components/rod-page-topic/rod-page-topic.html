@@ -1,0 +1,12 @@
+<link rel="import" href="../rod-page/rod-page.html" />
+
+<link rel="stylesheet" href="./rod-page-topic.scss" />
+<script src="./rod-page-topic.ts"></script>
+
+<template>
+    <rod-page>
+        <div class="illustration" style="background-image:url({ topic.image })" />
+        <p class="date">{{ #formattedDate }}</p>
+        <div class="content">{{ topic.text }}</div>
+    </rod-page>
+</template>

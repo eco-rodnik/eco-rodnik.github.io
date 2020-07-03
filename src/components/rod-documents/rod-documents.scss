@@ -1,7 +1,9 @@
+@import "../../styles/common.scss";
+
 :host {
     display: block;
 }
 
 li + li {
-    margin-top: 21px;
+    margin-top: $gap-5;
 }
