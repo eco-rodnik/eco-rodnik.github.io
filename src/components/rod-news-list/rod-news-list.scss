@@ -5,11 +5,12 @@
 }
 
 .news-list {
-    padding-top: $gap-2;
     display: flex;
-
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -$gap-4;
 }
 
-rod-news-item + rod-news-item {
-    padding-left: $gap-4;
+rod-news-item {
+    padding: $gap-4 0 0 $gap-4;
 }

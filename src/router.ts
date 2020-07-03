@@ -48,8 +48,6 @@ export default class RodRouter {
 
         const pn = this.a.pathname;
 
-        console.log('TEST', pn, DYNAMIC_ROUTE_RE.test(pn));
-
         if (DYNAMIC_ROUTE_RE.test(pn)) {
             const [ , base, name ] = pn.match(DYNAMIC_ROUTE_RE);
             const baseRoute = routes.find(r => r.dynamic && r.path.includes(base));
