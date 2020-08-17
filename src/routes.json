@@ -10,11 +10,6 @@
         "title": "Кто мы"
     },
     {
-        "path": "/events",
-        "title": "Что мы делаем",
-        "dynamic": true
-    },
-    {
         "path": "/news",
         "title": "Новости",
         "dynamic": true
