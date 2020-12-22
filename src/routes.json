@@ -2,8 +2,7 @@
     {
         "path": "/",
         "title": "ОЭО Родник",
-        "home": true,
-        "selected": true
+        "home": true
     },
     {
         "path": "/about",
@@ -13,10 +12,6 @@
         "path": "/news",
         "title": "Новости",
         "dynamic": true
-    },
-    {
-        "path": "/support",
-        "title": "Поддержать"
     },
     {
         "path": "/contacts",
