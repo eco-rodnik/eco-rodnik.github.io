@@ -18,7 +18,6 @@ export type RodRoute = {
     path: string,
     title: string,
     home?: boolean,
-    selected?: boolean,
     dynamic?: boolean,
     dynamicPath?: string,
     topic?: RodTopic,

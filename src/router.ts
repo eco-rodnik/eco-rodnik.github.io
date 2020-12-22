@@ -90,13 +90,6 @@ export default class RodRouter {
     }
 
     private _selectRoute(route: RodRoute): void {
-        const { routes: prevRoutes } = this.store.get();
-
-        const routes = prevRoutes.map<RodRoute>(r => ({
-            ...r,
-            selected: r.path === route.path
-        }));
-
-        this.store.set({ routes, currentRoute: route });
+        this.store.set({ currentRoute: route });
     }
 }

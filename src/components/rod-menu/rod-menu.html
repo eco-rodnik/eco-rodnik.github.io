@@ -4,7 +4,7 @@
     <nav class="menu">
         <ul>
             <e:for-each select={ $routes[[item => !item.home]] } key={ @value.path }>
-                <li>
+                <li class:selected={ @value == $currentRoute }>
                     <a href={ @value.path }
                        on:click:prevent={ $.router.navigateTo(@value) }>
                        { @value.title }

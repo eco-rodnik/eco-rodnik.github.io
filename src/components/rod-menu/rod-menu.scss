@@ -1,8 +1,19 @@
+@import "../../styles/common.scss";
+
 :host {
-    nav ul {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+
+    nav li {
+        display: inline-block;
+
+        &:not(:first-child) {
+            margin-left: $gap-10;
+        }
+
+        &.selected {
+            a {
+                text-decoration: underline;
+            }
+        }
     }
 
     a, a:visited {
