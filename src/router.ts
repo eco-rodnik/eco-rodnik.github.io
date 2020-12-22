@@ -26,14 +26,28 @@ export default class RodRouter {
 
         this._appTitle = homeRoute?.title;
 
+        window.onpopstate = (event: PopStateEvent) => this.navigateTo(event.state, true);
+
         this.navigateTo(initPath || homeRoute?.path);
     }
 
-    public navigateTo(path: RodRoute|string, data?: any): void {
+    public navigateTo(path: RodRoute|string, recover: boolean = false): void {
         const route = this._resolveRoute(path);
 
         if (route) {
-            this._activateRoute(route, data);
+            this._activateRoute(route, !recover);
+        }
+    }
+
+    private _activateRoute(route: RodRoute, isPushStateRequired: boolean): void {
+        const title = this._getRouteTitle(route);
+        const url = this._getRouteUrl(route);
+
+        document.title = title;
+        this.store.set({ currentRoute: route });
+        
+        if (isPushStateRequired) {
+            history.pushState(route, title, url);
         }
     }
 
@@ -68,15 +82,6 @@ export default class RodRouter {
         }
     }
 
-    private _activateRoute(route: RodRoute, data?: any): void {
-        const title = this._getRouteTitle(route);
-        const url = this._getRouteUrl(route);
-
-        this._selectRoute(route);
-        history.pushState(data, title, url);
-        document.title = title;
-    }
-
     private _getRouteTitle(route: RodRoute): string {
         if (route.home) {
             return this._appTitle;
@@ -87,9 +92,5 @@ export default class RodRouter {
 
     private _getRouteUrl(route: RodRoute): string {
         return route.dynamicPath || route.path;
-    }
-
-    private _selectRoute(route: RodRoute): void {
-        this.store.set({ currentRoute: route });
     }
 }
