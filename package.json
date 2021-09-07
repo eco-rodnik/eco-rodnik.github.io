@@ -33,7 +33,7 @@
     "mkdirp": "^1.0.4",
     "postcss": "^8.1.0",
     "remark": "^12.0.0",
-    "remark-html": "^11.0.2",
+    "remark-html": "^13.0.2",
     "rollup": "^2.12.0",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-tslint": "^0.2.2",
